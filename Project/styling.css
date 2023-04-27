@@ -3,6 +3,11 @@ body {
   text-align: justify;  
   font-family: 'Franklin Gothic medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+p, h1, h3{
+  margin: 15px;
+ } 
+
 .container {
   position: relative;
   text-align: center;
@@ -17,10 +22,6 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-p, h1, h3{
-  margin: 15px;
- } 
 
 
 img {
@@ -40,10 +41,10 @@ img {
 
 .flex-nav {
   display: flex;
-  background-color: black;
+  background-color: rgb(247, 241, 241);
  }
 
-.flex-nav > div {
+.flex-nav > ul {
   background-color: black;
   color: aliceblue;
   width: 100%;
