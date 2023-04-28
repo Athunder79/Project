@@ -80,6 +80,7 @@ ul{
 
 .flex-nav > li:hover {
   font-size: 1.5em;
+  background-color: rgb(61, 59, 59);
   transition-duration: 5ms; 
 }
 
@@ -102,4 +103,8 @@ ul{
  }
 
  
+table {
 
+  border: saddlebrown
+  ;
+}
