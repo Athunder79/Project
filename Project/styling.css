@@ -1,5 +1,5 @@
 body {
-  background-color: #c0def0a1;
+  background-color: #94b6bd;
   text-align: justify;  
   font-family: 'Franklin Gothic medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -11,8 +11,8 @@ p, h1, h3{
 .container {
   position: relative;
   text-align: center;
-  
 }
+
 .banner {
   color: #fefefe;
   font-size:8vw;
@@ -75,7 +75,8 @@ ul{
   line-height: 1.5em;
   font-size: 1.2em;
   display: inline;
-  padding: 10px; 
+  padding-top: 10px; 
+  padding-bottom:10px;
 }
 
 .flex-nav > li:hover {
@@ -92,19 +93,31 @@ ul{
 .flex-main > div {
   background-color: #776a6a;
   color: aliceblue;
-  padding: 5px;
+  /* padding: 5px; */
   line-height: 1.5em;
   font-size: 1em;
   width: 100%;
   }
 
- footer{
+ footer {
   font-size: small;
  }
 
  
-table {
+ tr,td, th {
+  border: 1px;
+  border-style:inset;
+  padding: 5px;
+  width: 20%;
+  border-color: black;
+  text-align: left;
+ }
 
-  border: saddlebrown
-  ;
+ caption {
+  font-size: 25px;
+  padding: 10px;
+ }
+table {
+  margin-left: auto;
+  margin-right: auto;
 }
