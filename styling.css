@@ -2,6 +2,7 @@ body {
   background-color: #94b6bd;
   text-align: justify;  
   font-family: 'Franklin Gothic medium', 'Arial Narrow', Arial, sans-serif;
+  color: #1e1e1e;
 }
 
 p, h2, h3{
@@ -101,6 +102,7 @@ ul{
 
  footer {
   font-size: small;
+  background-color: #776a6a;
  }
 
  
@@ -122,3 +124,15 @@ table {
   margin-right: auto;
 }
 
+.center {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.video {
+  aspect-ratio: 16/9;
+}
