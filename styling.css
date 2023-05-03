@@ -16,7 +16,7 @@ p, h2, h3{
 
 .banner {
   color: #fefefe;
-  font-size:8vw;
+  font-size:6vw;
   text-align: center;
   position: absolute;
   top: 50%;
@@ -33,6 +33,8 @@ img {
 .imgbody {
   max-width: 100%;
   height: auto;
+  padding-top: 17px;
+  padding-bottom: 17px;
 }
 
 nav {
@@ -136,4 +138,20 @@ table {
 .video {
   aspect-ratio: 16/9;
   max-width: 960px;
+  padding-bottom: 20px;
 }
+
+.logo {
+  width:32px;
+  padding: 30px;
+  position: relative;
+}
+
+.logotop {
+  width:32px;
+  padding: 30px;
+  position: absolute;
+}
+
+
+
