@@ -9,6 +9,10 @@ p, h2, h3{
   margin: 15px
  } 
 
+ h1{
+  text-align: center;
+ }
+
 .container {
   position: relative;
   text-align: center;
@@ -140,6 +144,7 @@ table {
   aspect-ratio: 16/9;
   max-width: 960px;
   padding-bottom: 20px;
+  border: none;
 }
 
 .logo {
@@ -154,5 +159,8 @@ table {
   position: absolute;
 }
 
+.spotify {
+  
+}
 
 
