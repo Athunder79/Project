@@ -66,8 +66,9 @@ ul{
 .flex-nav {
   display: flex;
   background-color: black;
-  
-   }
+  width: 100%;
+  /* position: absolute; stop hover moving content */
+  }
 
 .flex-nav > li {
   background-color: black;
@@ -82,10 +83,9 @@ ul{
   padding-bottom:10px;
 }
 
-.flex-nav > li:hover {
+.flex-nav > li > a:hover {
   font-size: 1.5em;
-  background-color: rgb(61, 59, 59);
-  transition-duration: 5ms; 
+  transition-duration: 250ms;
 }
 
 .flex-main {
@@ -124,6 +124,7 @@ ul{
 table {
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 20px;
 }
 
 .center {
