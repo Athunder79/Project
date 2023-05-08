@@ -1,8 +1,8 @@
 body {
-  background-color: #94b6bd;
-  text-align: justify;  
+  background-color: #7199a0;
+  /* text-align: justify;   */
   font-family: 'Franklin Gothic medium', 'Arial Narrow', Arial, sans-serif;
-  color: #1e1e1e;
+  color: #fefefe;
 }
 
 p, h2, h3{
@@ -13,9 +13,20 @@ p, h2, h3{
   text-align: center;
  }
 
+/* header{
+  background-image: url ("Concertcrowd.jpg");
+
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+} */
 .container {
   position: relative;
   text-align: center;
+  
 }
 
 .banner {
@@ -94,13 +105,11 @@ ul{
 
 .flex-main {
   display: flex;
-  background-color: black;
-}
+  }
 
 .flex-main > div {
   background-color: #776a6a;
   color: aliceblue;
-  /* padding: 5px; */
   line-height: 1.5em;
   font-size: 1em;
   width: 100%;
@@ -109,6 +118,7 @@ ul{
  footer {
   font-size: small;
   background-color: #776a6a;
+  margin-top: 30px;
  }
 
  
@@ -116,8 +126,7 @@ ul{
   border: 1px;
   border-style:inset;
   padding: 5px;
-  /* width: 20%; */
-  border-color: black;
+  border-color: #5ba6bb;
   text-align: left;
  }
 
@@ -129,6 +138,7 @@ table {
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 20px;
+  width: 100%;
 }
 
 .center {
@@ -160,7 +170,11 @@ table {
 }
 
 .spotify {
+  border: 0;
+  display: flex;
   
 }
+
+
 
 
