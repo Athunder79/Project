@@ -1,32 +1,20 @@
 body {
   background-color: #3B5759;
-  /* text-align: justify;   */
   font-family: 'Franklin Gothic medium', 'Arial Narrow', Arial, sans-serif;
   color: #fefefe;
 }
 
 p, h2, h3{
   margin: 15px
- } 
+} 
 
  h1{
   text-align: center;
- }
+}
 
-/* header{
-  background-image: url ("Concertcrowd.jpg");
-
-  height: 500px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-
-} */
 .container {
   position: relative;
-  text-align: center;
-  
+  text-align: center; 
 }
 
 .banner {
@@ -38,7 +26,6 @@ p, h2, h3{
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 
 img {
   height: auto;
@@ -57,10 +44,14 @@ position: sticky;
 top: 0px;
 }
 
-@media screen and (max-width:600px)
-{
-  .flex-nav, .flex-main, .flex-main2 {flex-direction: column;}
-  td {font-size: .7em;}
+@media screen and (max-width:600px){
+  .flex-nav, .flex-main, .flex-main2 {
+    flex-direction: column;
+  }
+
+  td {
+    font-size: .7em;
+  }
 }
 
 a {
@@ -74,16 +65,14 @@ ul{
   margin-block-end: 0em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-  padding-inline-start: 0px;
-  
+  padding-inline-start: 0px;  
 }
 
 .flex-nav {
   display: flex;
   background-color: black;
   width: 100%;
-  /* position: absolute; stop hover moving content */
-  }
+}
 
 .flex-nav > li {
   background-color: black;
@@ -105,7 +94,7 @@ ul{
 
 .flex-main {
   display: flex;
-  }
+}
 
 .flex-main > div {
   background-color: #776a6a;
@@ -113,27 +102,25 @@ ul{
   line-height: 1.5em;
   font-size: 1em;
   width: 100%;
-  }
+}
 
-  .flex-main2 {
-    display: flex;
-    }
+.flex-main2 {
+  display: flex;
+}
   
-  .flex-main2 > div {
-    background-color: #7199a0;
-    color: aliceblue;
-    line-height: 1.5em;
-    font-size: 1em;
-    width: 100%;
-    }
-
+.flex-main2 > div {
+  background-color: #3B5759;
+  color: aliceblue;
+  line-height: 1.5em;
+  font-size: 1em;
+  width: 100%;
+}
 
  footer {
   font-size: small;
   background-color: #776a6a;
   margin-top: 30px;
- }
-
+}
  
  tr,td, th {
   border: 1px;
@@ -147,6 +134,7 @@ ul{
   font-size: 25px;
   padding: 10px;
  }
+
 table {
   margin-left: auto;
   margin-right: auto;
@@ -184,8 +172,7 @@ table {
 
 .spotify {
   border: 0;
-  display: flex;
-  
+  display: flex; 
 }
 
 
