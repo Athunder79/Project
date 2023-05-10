@@ -2,13 +2,17 @@ body {
   background-color: #3B5759;
   font-family: 'Franklin Gothic medium', 'Arial Narrow', Arial, sans-serif;
   color: #fefefe;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
 p, h2, h3{
   margin: 15px
 } 
 
- h1{
+ h1,h2{
   text-align: center;
 }
 
@@ -49,14 +53,16 @@ top: 0px;
     flex-direction: column;
   }
 
-  td {
+  body table{
+    width: 100%;
     font-size: .7em;
   }
+  
 }
 
 a {
   color: aliceblue;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 /* override user agent styling */
@@ -72,6 +78,10 @@ ul{
   display: flex;
   background-color: black;
   width: 100%;
+}
+
+.flex-nav a{
+  text-decoration: none;
 }
 
 .flex-nav > li {
@@ -94,6 +104,7 @@ ul{
 
 .flex-main {
   display: flex;
+
 }
 
 .flex-main > div {
@@ -121,25 +132,27 @@ ul{
   background-color: #776a6a;
   margin-top: 30px;
 }
+
+th{
+  font-size: larger;
+}
  
- tr,td, th {
-  border: 1px;
-  border-style:inset;
+ tr, td, th {
+  border-bottom: 2px solid #5ba6bb;
   padding: 5px;
-  border-color: #5ba6bb;
   text-align: left;
  }
 
  caption {
   font-size: 25px;
-  padding: 10px;
+  padding: 40px;
  }
 
 table {
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 20px;
-  width: 100%;
+  width: 80%;
 }
 
 .center {
@@ -173,6 +186,11 @@ table {
 .spotify {
   border: 0;
   display: flex; 
+}
+
+.small-text{
+  font-size: 0.7em;
+  text-align: center;
 }
 
 
