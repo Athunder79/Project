@@ -1,6 +1,7 @@
 body {
   background-color: #3B5759;
-  font-family: 'Franklin Gothic medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Montserrat';
+  font-size: 1.2em;
   color: #fefefe;
   width: 100%;
   margin:auto;
@@ -45,7 +46,7 @@ position: sticky;
 top: 0px;
 }
 
-@media screen and (max-width:600px){
+@media screen and (max-width:700px){
   .flex-nav, .flex-main, .flex-main2, .spotify {
     flex-direction: column;
   }
