@@ -17,6 +17,10 @@ p, h2, h3{
 }
 
 .container {
+  background-image: url('Concertcrowd.jpg');
+  background-repeat: no-repeat;
+  background-position: center; 
+  height: 350px;
   display: flex;
   position: relative;
   text-align: center; 
@@ -48,8 +52,12 @@ top: 0px;
 }
 
 @media screen and (max-width:700px){
-  .flex-nav, .flex-main, .flex-main2, .spotify {
+  .flex-nav, .flex-main, .flex-mainWrapreverse, .flex-main2, .spotify {
     flex-direction: column;
+  }
+  
+  .flex-mainWrapreverse{
+    flex-direction: column-reverse;
   }
 
   body table{
@@ -62,6 +70,7 @@ top: 0px;
 
   }
 }
+
 
 a {
   color: #f0f8ff;
@@ -107,10 +116,25 @@ ul{
 
 .flex-main {
   display: flex;
+  background-color:#776a6a;
 
 }
 
 .flex-main > div {
+  background-color: #776a6a;
+  color: #f0f8ff;
+  line-height: 1.5em;
+  font-size: 1em;
+  flex-basis: 100%;
+  padding: 5px;
+}
+
+.flex-mainWrapreverse {
+  display: flex;
+
+}
+
+.flex-mainWrapreverse > div {
   background-color: #776a6a;
   color: #f0f8ff;
   line-height: 1.5em;
