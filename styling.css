@@ -16,6 +16,10 @@ p, h2, h3{
   text-align: center;
 }
 
+.left {
+  text-align: left;
+}
+
 .container {
   background-image: url('Concertcrowd.jpg');
   background-repeat: no-repeat;
@@ -173,7 +177,8 @@ th{
  }
 
  caption {
-  font-size: 25px;
+  font-size: 30px;
+  font-weight: bold;
   padding: 40px;
  }
 
