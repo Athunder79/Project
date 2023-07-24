@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styling.css">
+    <script src="script1.js"></script>
+    <title>My Golf Gamne</title>
+    <link rel="icon" type="image/x-icon" href="">
+
+</head>
+
+<body>
+    
+    <nav>
+       <ul>
+        <li>Home</li>
+        <li>Stats</li>
+       </ul>
+    </nav>
+
+    <input type="button" id="start" value="Start Round">
+
+    <h1 id="holenum" class="hide">Hole 1</h1>
+<div>
+    <form type="reset" action="#" id="holeLength" class="hide">
+        <input id="HoleLnth" type="text" placeholder="Hole Length Yrds">
+        <input id="HolePar" type="text" placeholder="Hole 1 Par">
+        <button id="hole1" type="Enter">Enter</button>
+    </form>
+</div>
+<div id="form" class = "hide">
+
+    <form type="reset" action="#">
+        <label id="shotinfo" for="Club">Club:</label>
+        <select name="club" id="club">
+          <option value="driver">Driver</option>
+          <option value="3w">3 Wood</option>
+          <option value="5w">5 Wood</option>
+          <option value="3i">3 Iron</option>
+          <option value="4i">4 Iron</option>
+          <option value="5i">5 Iron</option>
+          <option value="6i">6 Iron</option>
+          <option value="7i">7 Iron</option>
+          <option value="8i">8 Iron</option>
+          <option value="9i">9 Iron</option>
+          <option value="pw">Pitching Wedge</option>
+          <option value="sw">Sand Wedge</option>
+          <option value="pt">Putter</option>
+        </select>
+        <p>
+        <input id="shotdist" type="number" placeholder="Shot Distance in yards">
+        
+        <input id="shot" type="button" value="Add Shot">
+        <input id="finishhole" type="button" value="Finshed hole">
+      </form>
+</div>
+    <main>
+
+        <div class="center">
+            <table class="Score Card">
+            
+                <caption><h2>Front 9</h2> </caption>
+                <tbody>
+                    <tr>
+                        <th>Hole</th>
+                        <th scope="col">1</th>
+                        <th scope="col">2</th>
+                        <th scope="col">3</th>
+                        <th scope="col">4</th>
+                        <th scope="col">5</th>
+                        <th scope="col">6</th>
+                        <th scope="col">7</th>
+                        <th scope="col">8</th>
+                        <th scope="col">9</th>
+                        <th scope="col">Total</th>
+
+                    </tr>
+                    <tr>
+                        <th>Dist in Yrds</th>
+                        <td id="dis1">0</td>
+                        <td id="dis2">0</td>
+                        <td id="dis3">0</td>
+                        <td id="dis4">0</td>
+                        <td id="dis5">0</td>
+                        <td id="dis6">0</td>
+                        <td id="dis7">0</td>
+                        <td id="dis8">0</td>
+                        <td id="dis9">0</td>
+                        <td id="totalFrontDist"></td>
+
+                    </tr>
+                    <tr>
+                        <td id=>Par</td>
+                        <td id="par1">0</td>
+                        <td id="par2">0</td>
+                        <td id="par3">0</td>
+                        <td id="par4">0</td>
+                        <td id="par5">0</td>
+                        <td id="par6">0</td>
+                        <td id="par7">0</td>
+                        <td id="par8">0</td>
+                        <td id="par9">0</td>
+                        <td id="totalFrontPar"></td>
+                    </tr>
+                    <tr>
+                        <td>Score</td>
+                        <td id="scor1">0</td>
+                        <td id="scor2">0</td>
+                        <td id="scor3">0</td>
+                        <td id="scor4">0</td>
+                        <td id="scor5">0</td>
+                        <td id="scor6">0</td>
+                        <td id="scor7">0</td>
+                        <td id="scor8">0</td>
+                        <td id="scor9">0</td>
+                        <td id = "totalFrontScor"></td>
+                    </tr>
+                    <tr>
+                        <td>Over/Under</td>
+                        <td id="ou1">0</td>
+                        <td id="ou2">0</td>
+                        <td id="ou3">0</td>
+                        <td id="ou4">0</td>
+                        <td id="ou5">0</td>
+                        <td id="ou6">0</td>
+                        <td id="ou7">0</td>
+                        <td id="ou8">0</td>
+                        <td id="ou9">0</td>
+                        <td id="totalFrontOU"></td>
+                    </tr>
+            </tbody>
+        </table>
+        
+            <div class="center">
+                <table class="Score Card">
+                
+                    <caption><h2>Back 9</h2></caption>
+                    <tbody>
+                        <tr>
+                            <th>Hole</th>
+                            <th scope="col">10</th>
+                            <th scope="col">11</th>
+                            <th scope="col">12</th>
+                            <th scope="col">13</th>
+                            <th scope="col">14</th>
+                            <th scope="col">15</th>
+                            <th scope="col">16</th>
+                            <th scope="col">17</th>
+                            <th scope="col">18</th>
+                            <th scope="col">Total</th>
+    
+                        </tr>
+                        <tr>
+                            <th>Dist in Yrds</th>
+                            <td id="dis10">0</td>
+                            <td id="dis11">0</td>
+                            <td id="dis12">0</td>
+                            <td id="dis13">0</td>
+                            <td id="dis14">0</td>
+                            <td id="dis15">0</td>
+                            <td id="dis16">0</td>
+                            <td id="dis17">0</td>
+                            <td id="dis18">0</td>
+                            <td id="disBackTotal">0</td>
+                            <td>5000</td>
+    
+                        </tr>
+                        <tr>
+                            <td>Par</td>
+                            <td id="par10">0</td>
+                            <td id="par11">0</td>
+                            <td id="par12">0</td>
+                            <td id="par13">0</td>
+                            <td id="par14">0</td>
+                            <td id="par15">0</td>
+                            <td id="par16">0</td>
+                            <td id="par17">0</td>
+                            <td id="par18">0</td>
+                            <td id="totalBackPar"></td>
+                            <td>36</td>
+                        </tr>
+                        <tr>
+                            <td>Score</td>
+                            <td id="scor10">0</td>
+                            <td id="scor11">0</td>
+                            <td id="scor12">0</td>
+                            <td id="scor13">0</td>
+                            <td id="scor14">0</td>
+                            <td id="scor15">0</td>
+                            <td id="scor16">0</td>
+                            <td id="scor17">0</td>
+                            <td id="scor18">0</td>
+                            <td id="totalBaScockr"></td>
+                        </tr>
+                        <td>Over/Under</td>
+                        <td id="ou10">0</td>
+                        <td id="ou11">0</td>
+                        <td id="ou12">0</td>
+                        <td id="ou13">0</td>
+                        <td id="ou14">0</td>
+                        <td id="ou15">0</td>
+                        <td id="ou16">0</td>
+                        <td id="ou17">0</td>
+                        <td id="ou18">0</td>
+                        <td>0</td>
+                        <td></td>
+                </tbody>
+            </table>
+            
+        </div>
+    </main>
+    <footer>
+      
+    </footer>
+
+</body>
+
+</html>

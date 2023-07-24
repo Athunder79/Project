@@ -1,0 +1,51 @@
+body {
+    background-image: url("images/Cullinan_Links_Golf5_dzbj7j.webp");
+}
+
+
+table {
+    
+    text-align: center;
+    border:solid;
+    background-color:#00fff2;
+   
+}
+
+td {
+    /* border:solid; */
+    border-style: collapse;
+    background-color: beige;
+    padding: 1em;    
+}
+
+.underpar {
+    background-color: #7cea7c;
+}
+
+.par {
+    background-color: #7c7cce;
+}
+
+.overpar {
+    background-color: #bc3c3c;
+}
+
+tr,th {
+    padding: 1em;
+}
+
+.center {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display:contents;
+}
+
