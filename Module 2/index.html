@@ -19,19 +19,18 @@
         <li>Stats</li>
        </ul>
     </nav>
-
+<div class="center">
     <input type="button" id="start" value="Start Round">
-
+</div>
     <h1 id="holenum" class="hide">Hole 1</h1>
-<div>
+<div class="center">
     <form type="reset" action="#" id="holeLength" class="hide">
-        <input id="HoleLnth" type="text" placeholder="Hole Length Yrds">
-        <input id="HolePar" type="text" placeholder="Hole 1 Par">
-        <button id="hole1" type="Enter">Enter</button>
+        <div><input id="HoleLnth" type="text" placeholder="Hole Length Yrds"></div>
+        <div><input id="HolePar" type="text" placeholder="Hole 1 Par"></div>
+        <div><button id="hole1" type="Enter">Enter</button></div>
     </form>
 </div>
 <div id="form" class = "hide">
-
     <form type="reset" action="#">
         <label id="shotinfo" for="Club">Club:</label>
         <select name="club" id="club">
@@ -74,11 +73,12 @@
                         <th scope="col">7</th>
                         <th scope="col">8</th>
                         <th scope="col">9</th>
-                        <th scope="col">Total</th>
+                        <th scope="col">IN</th>
+                        <th></th>
 
                     </tr>
                     <tr>
-                        <th>Dist in Yrds</th>
+                        <td>Dist in Yrds</td>
                         <td id="dis1">0</td>
                         <td id="dis2">0</td>
                         <td id="dis3">0</td>
@@ -105,7 +105,7 @@
                         <td id="totalFrontPar"></td>
                     </tr>
                     <tr>
-                        <td>Score</td>
+                        <td>Shots</td>
                         <td id="scor1">0</td>
                         <td id="scor2">0</td>
                         <td id="scor3">0</td>
@@ -118,7 +118,8 @@
                         <td id = "totalFrontScor"></td>
                     </tr>
                     <tr>
-                        <td>Over/Under</td>
+                        <td>Score</td>
+                        <td class="hide" id="ou0">0</td>
                         <td id="ou1">0</td>
                         <td id="ou2">0</td>
                         <td id="ou3">0</td>
@@ -135,7 +136,6 @@
         
             <div class="center">
                 <table class="Score Card">
-                
                     <caption><h2>Back 9</h2></caption>
                     <tbody>
                         <tr>
@@ -149,11 +149,11 @@
                             <th scope="col">16</th>
                             <th scope="col">17</th>
                             <th scope="col">18</th>
-                            <th scope="col">Total</th>
+                            <th scope="col">OUT</th>
     
                         </tr>
                         <tr>
-                            <th>Dist in Yrds</th>
+                            <td>Dist in Yrds</td>
                             <td id="dis10">0</td>
                             <td id="dis11">0</td>
                             <td id="dis12">0</td>
@@ -164,7 +164,7 @@
                             <td id="dis17">0</td>
                             <td id="dis18">0</td>
                             <td id="disBackTotal">0</td>
-                            <td>5000</td>
+                            <td>0</td>
     
                         </tr>
                         <tr>
@@ -182,7 +182,7 @@
                             <td>36</td>
                         </tr>
                         <tr>
-                            <td>Score</td>
+                            <td>Shots</td>
                             <td id="scor10">0</td>
                             <td id="scor11">0</td>
                             <td id="scor12">0</td>
@@ -194,18 +194,18 @@
                             <td id="scor18">0</td>
                             <td id="totalBaScockr"></td>
                         </tr>
-                        <td>Over/Under</td>
-                        <td id="ou10">0</td>
-                        <td id="ou11">0</td>
-                        <td id="ou12">0</td>
-                        <td id="ou13">0</td>
-                        <td id="ou14">0</td>
-                        <td id="ou15">0</td>
-                        <td id="ou16">0</td>
-                        <td id="ou17">0</td>
-                        <td id="ou18">0</td>
-                        <td>0</td>
-                        <td></td>
+                            <td>Score</td>
+                            <td id="ou10">0</td>
+                            <td id="ou11">0</td>
+                            <td id="ou12">0</td>
+                            <td id="ou13">0</td>
+                            <td id="ou14">0</td>
+                            <td id="ou15">0</td>
+                            <td id="ou16">0</td>
+                            <td id="ou17">0</td>
+                            <td id="ou18">0</td>
+                            <td>0</td>
+                            <td>0</td>
                 </tbody>
             </table>
             

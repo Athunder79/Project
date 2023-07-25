@@ -1,13 +1,14 @@
 body {
     background-image: url("images/Cullinan_Links_Golf5_dzbj7j.webp");
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
 table {
-    
+    width: 90vw;
     text-align: center;
     border:solid;
-    background-color:#00fff2;
+    background-color:#46a9a4cc;
    
 }
 
@@ -15,7 +16,7 @@ td {
     /* border:solid; */
     border-style: collapse;
     background-color: beige;
-    padding: 1em;    
+    padding: .5em;    
 }
 
 .underpar {
@@ -23,7 +24,7 @@ td {
 }
 
 .par {
-    background-color: #7c7cce;
+    background-color: lightblue;
 }
 
 .overpar {
@@ -46,6 +47,7 @@ tr,th {
 }
 
 .show {
-    display:contents;
+    display:flex;
+    align-items: center;
 }
 
