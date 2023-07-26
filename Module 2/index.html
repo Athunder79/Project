@@ -6,13 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styling.css">
     <script src="script1.js"></script>
-    <title>My Golf Gamne</title>
+    <title>My Scorecard</title>
     <link rel="icon" type="image/x-icon" href="">
 
 </head>
 
-<body>
-    
+<body>   
     <nav>
        <ul>
         <li>Home</li>
@@ -20,14 +19,22 @@
        </ul>
     </nav>
 <div class="center">
-    <input type="button" id="start" value="Start Round">
+    <input type="button" class="button" id="start" value="Start Round">
 </div>
     <h1 id="holenum" class="hide">Hole 1</h1>
 <div class="center">
     <form type="reset" action="#" id="holeLength" class="hide">
-        <div><input id="HoleLnth" type="text" placeholder="Hole Length Yrds"></div>
-        <div><input id="HolePar" type="text" placeholder="Hole Par"></div>
-        <div><button id="hole1" type="reset">Enter</button></div>
+        <div class=""><input id="HoleLnth" type="text" placeholder="Hole Length Yrds"></div>
+        
+            <label for="Par">Par</label>
+             <select name="HolePar" id="HolePar">
+             <option value="3">3</option>
+             <option value="4">4</option>
+             <option value="4">5</option>
+             </select>
+           
+            
+        <div><button id="hole1" class="button" type="reset">Enter</button></div>
     </form>
 </div>
 <div id="form" class = "hide">
@@ -164,7 +171,7 @@
                             <td id="dis16">0</td>
                             <td id="dis17">0</td>
                             <td id="dis18">0</td>
-                            <td id="totalBkDis">0</td>
+                            <td id="totalBkDis"></td>
                             <td id="totalRndDis">0</td>
     
                         </tr>
@@ -179,8 +186,8 @@
                             <td id="par16">0</td>
                             <td id="par17">0</td>
                             <td id="par18">0</td>
-                            <td id="totalBkPar">4</td>
-                            <td id="totalRndPar">36</td>
+                            <td id="totalBkPar"></td>
+                            <td id="totalRndPar">0</td>
                         </tr>
                         <tr>
                             <td>Shots</td>
@@ -194,7 +201,7 @@
                             <td id="scor17">0</td>
                             <td id="scor18">0</td>
                             <td id="totalBkScor"></td>
-                            <td id="totalRndScor"></td>
+                            <td id="totalRndScor">0</td>
                         </tr>
                             <td>Score</td>
                             <td id="ou10">0</td>
@@ -206,7 +213,7 @@
                             <td id="ou16">0</td>
                             <td id="ou17">0</td>
                             <td id="ou18">0</td>
-                            <td id="totalBkOu">0</td>
+                            <td id="totalBkOu"></td>
                             <td id="totalRndOu">0</td>
                             
                 </tbody>
