@@ -1,20 +1,133 @@
 body {
-    background-image: url("images/Cullinan_Links_Golf5_dzbj7j.webp");
-    font-family: Arial, Helvetica, sans-serif;
+    
+    background-image:linear-gradient(#3b3a3a80, #3b3a3a80), url("images/Cullinan_Links_Golf5_dzbj7j.webp");
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+@media screen and (600px){
+    table {
+        width: 100%;
+    }
+    
 }
 
 #holenum, #holeLength{
     color:aliceblue;
 }
 
+h1 {
+    color: aliceblue;
+    text-align: center;
+    background-color: #0deb716a;
+    padding:5px
+}
+
+h2{
+    color: aliceblue;
+}
+
+.startButton, .enterButton {
+    border-radius: 20px;
+    border: none;
+    background-color: #2781c5;
+    color: aliceblue;
+    font-size: larger;
+    padding:10px;
+    font-weight: 530;
+}
+
+
+
+.enterButton1 {
+    border-radius: 20px;
+    border: none;
+    background-color: #bf1111;
+    color: aliceblue;
+    font-size: larger;
+    padding:10px;
+    font-weight: 530;
+}
+
+
+
+.numEntry{
+    display:block;
+    border-radius: 20px;
+    border: none;
+    background-color: #f0f7f5;
+    font-size: larger;
+    padding:10px;
+    font-weight: 530;
+    margin-bottom: 20px;
+}
+
+.dropdownLabel{
+    color: black;
+    border-radius: 20px;
+    border: none;
+    background-color: #f0f7f5;
+    font-size: larger;
+    padding:10px;
+    font-weight: 530;
+    margin-bottom: 10px;
+
+
+}
+
+.shotNum {
+    display: flex;
+    flex-direction: row;
+    color:aliceblue;
+    font-size:xx-large;
+    font-weight: bold;
+    justify-content:space-evenly;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
 
 table {
-    width: 90vw;
+    font-size: 12px;
+    width: 80%;
     text-align: center;
     border:solid;
     background-color:#46a9a4cc;
    
 }
+
+nav {
+    display:flex;
+    width: 100%;
+    background-color: #111111;
+
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: flex;
+
+    color: white;
+    text-align: center;
+    padding: 13px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #111111;
+  }
 
 td {
     /* border:solid; */
@@ -43,6 +156,7 @@ tr,th {
     display: flex;
     flex-wrap:wrap;
     justify-content: space-around;
+    padding-top: 15px;
     
 }
 

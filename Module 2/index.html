@@ -13,34 +13,36 @@
 
 <body>   
     <nav>
-       <ul>
-        <li>Home</li>
-        <li>Stats</li>
-       </ul>
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">STATS</a></li>
+        </ul>
+        
+        
     </nav>
 <div class="center">
-    <input type="button" class="button" id="start" value="Start Round">
+    <input type="button" class="startButton" id="start" value="Start Round">
 </div>
     <h1 id="holenum" class="hide">Hole 1</h1>
 <div class="center">
-    <form type="reset" action="#" id="holeLength" class="hide">
-        <div class=""><input id="HoleLnth" type="text" placeholder="Hole Length Yrds"></div>
-        
-            <label for="Par">Par</label>
-             <select name="HolePar" id="HolePar">
-             <option value="3">3</option>
-             <option value="4">4</option>
-             <option value="4">5</option>
-             </select>
-           
-            
-        <div><button id="hole1" class="button" type="reset">Enter</button></div>
+    <form action="#" id="holeLength" class="hide">
+        <div><input id="HoleLnth" class="numEntry" type="number" placeholder="Hole Length Yrds"></div>
+        <div class = "">
+            <label class="dropdownLabel">Select Par</label>
+            <select class="dropdownLabel" name="HolePar" id="HolePar">
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div> 
+        <div class = "enter"><button id="hole1" class="enterButton" type="reset">Submit Details</button></div>
     </form>
 </div>
 <div id="form" class = "hide">
-    <form type="reset" action="#">
-        <label id="shotinfo" for="Club">Shot 1</label>
-        <select name="club" id="club">
+    <form action="#">
+        <label class="shotNum" id="shotinfo">Shot 1</label>
+        <select class = "numEntry" name="club" id="club">
+          <option value="Select Club">Select Club</option>  
           <option value="Driver">Driver</option>
           <option value="3 Wood">3 Wood</option>
           <option value="5 Wood">5 Wood</option>
@@ -55,11 +57,12 @@
           <option value="Sand Wedge">Sand Wedge</option>
           <option value="Putter">Putter</option>
         </select>
-        <p>
-        <input id="shotdist" type="number" placeholder="Shot Distance in yards">
         
-        <input id="shot" type="reset" value="Add Shot">
-        <input id="finishhole" type="reset" value="Finshed hole">
+        <input id="shotdist" class="numEntry" type="number" placeholder="Shot Distance in yards">
+        
+        <input id="shot" class="enterButton" type="reset" value="Add Shot">
+        <h2 class="center">OR</h2>
+        <input id="finishhole" class="enterButton1" type="reset" value="Holed the putt">
       </form>
 </div>
     <main>
@@ -99,7 +102,7 @@
 
                     </tr>
                     <tr>
-                        <td id=>Par</td>
+                        <td>Par</td>
                         <td id="par1">0</td>
                         <td id="par2">0</td>
                         <td id="par3">0</td>
@@ -141,7 +144,7 @@
             </tbody>
         </table>
         
-            <div class="center">
+          
                 <table class="Score Card">
                     <caption><h2>Back 9</h2></caption>
                     <tbody>
@@ -203,6 +206,7 @@
                             <td id="totalBkScor"></td>
                             <td id="totalRndScor">0</td>
                         </tr>
+                        <tr>
                             <td>Score</td>
                             <td id="ou10">0</td>
                             <td id="ou11">0</td>
@@ -215,7 +219,7 @@
                             <td id="ou18">0</td>
                             <td id="totalBkOu"></td>
                             <td id="totalRndOu">0</td>
-                            
+                        </tr>  
                 </tbody>
             </table>
             
