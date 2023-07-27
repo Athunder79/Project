@@ -9,8 +9,9 @@ const dist = [];
 const par = [];
 const club =[];
 const clubDist =[];
+const shotNum =[];
 const shots =[];
-const ou = [];
+const hole = [];
 
 
 
@@ -29,6 +30,7 @@ function submitDetails(){
     dist.push(+document.getElementById("HoleLnth").value);
     par.push(+document.getElementById("HolePar").value); 
     pushHoleDetails();
+    document.getElementById("shotinfo").innerHTML="Shot 1";
 }
 
 function pushHoleDetails(){
@@ -60,13 +62,14 @@ function totalDist(){
     return dist.reduce((x, y) => x + y);
     };
 
-//  Add current shot to html table
+//  Add current shot to html table and arrays
     function addShot(){
         let i = dist.length;
         scoreAdd1();
-        clubDist.push([document.getElementById("holenum").innerText, 
-                       document.getElementById("club").value, 
-                       +document.getElementById("shotdist").value]);
+        hole.push(document.getElementById("holenum").innerText);
+        shotNum.push(document.getElementById("shotinfo").innerText);
+        club.push(document.getElementById("club").value);
+        clubDist.push(+document.getElementById("shotdist").value);
                        
         document.getElementById(`scor${i}`).innerHTML = score;
         document.getElementById("shotinfo").innerHTML = 'Shot ' + (score + 1);
@@ -94,6 +97,7 @@ function nexthole(){
         else{
             document.getElementById("totalBkScor").innerHTML = shots.slice(8, shots.length-1).reduce((x, y) => x + y);
             document.getElementById("totalRndScor").innerHTML = shots.reduce((x, y) => x + y);
+            
         };
             highLow();
             showholength();
