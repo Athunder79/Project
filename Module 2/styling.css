@@ -29,7 +29,7 @@ h2{
 }
 
 .startButton, .enterButton {
-    border-radius: 20px;
+    border-radius: 15px;
     border: none;
     background-color: #2781c5;
     color: aliceblue;
@@ -41,7 +41,7 @@ h2{
 
 
 .enterButton1 {
-    border-radius: 20px;
+    border-radius: 15px;
     border: none;
     background-color: #bf1111;
     color: aliceblue;
@@ -54,7 +54,7 @@ h2{
 
 .numEntry{
     display:block;
-    border-radius: 20px;
+    border-radius: 15px;
     border: none;
     background-color: #f0f7f5;
     font-size: larger;
@@ -65,7 +65,7 @@ h2{
 
 .dropdownLabel{
     color: black;
-    border-radius: 20px;
+    border-radius: 15px;
     border: none;
     background-color: #f0f7f5;
     font-size: larger;
@@ -98,6 +98,10 @@ table {
     border:solid;
     background-color:#46a9a4cc;
    
+}
+
+.back9heading th{
+    font-size: 10px;
 }
 
 nav {
