@@ -4,9 +4,11 @@ body {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-@media screen and (600px){
+@media screen and (max-width: 1200px){
     table {
-        width: 100%;
+        width: 80%;
+        padding: 0px;
+        background-color: #bc3c3c;
     }
     
 }
@@ -91,7 +93,7 @@ form {
 
 table {
     font-size: 12px;
-    width: 80%;
+    width: 100%;
     text-align: center;
     border:solid;
     background-color:#46a9a4cc;
