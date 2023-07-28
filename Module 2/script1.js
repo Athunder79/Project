@@ -1,17 +1,24 @@
+
 addEventListener('load', function () {
     document.getElementById("start").addEventListener("click", showholength);
     document.getElementById("hole1").addEventListener("click", submitDetails);
     document.getElementById("shot").addEventListener("click", addShot);
     document.getElementById("finishhole").addEventListener("click", nexthole);
     document.getElementById("removeShot").addEventListener("click", removeShot);
+    document.getElementById("statsButton").addEventListener("click", sumClubDist);
+    window.addEventListener("beforeunload", (event) => {
+        event.returnValue = 'sdfasf';
+    });
 })
 score = 0
+const clubMaster = ['Driver', '3 Wood', '5 Wood', '3 Iron', '4 Iron', '5 Iron', '6 Iron', '7 Iron', '8 Iron', '9 Iron', 'Pitching Wedge', 'Sand Wedge', 'Putter'];
 const dist = [];
 const par = [];
+const shots =[];
+
 const club =[];
 const clubDist =[];
 const shotNum =[];
-const shots =[];
 const hole = [];
 
 
@@ -143,3 +150,19 @@ function highLow(){
     let i = dist.length;   
     document.getElementById(`scor${i}`).className=(par[i-1]-shots[i-1] === 0 ? "par" : (par[i-1]-shots[i-1] > 0 ? "underpar" : "overpar"));
 };
+
+
+function sumClubDist(){
+    let sum = 0;
+    let clubTot = 0;
+    for (let i = 0; i < club.length; i++){
+        if (club[i] === "3 Iron"){
+            sum += clubDist[i];
+            clubTot += 1;
+        }
+    }
+    document.getElementById("3iStats").classList.toggle("show");
+    document.getElementById("3iStats").innerHTML = "You hit " + clubTot + " 3 Irons today with a total distance of " + sum + " yards and an average distance of " + Math.round(sum/clubTot) + " yards";
+    
+  
+}

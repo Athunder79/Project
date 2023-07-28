@@ -15,12 +15,15 @@
     <nav>
         <ul>
             <li><a href="#">HOME</a></li>
-            <li><a href="#">STATS</a></li>
+            <li><a id="statsButton" href="#">STATS</a></li>
             <li><a id="removeShot" class ="hide" href="#">REMOVE LAST SHOT</a></li>
         </ul>
         
         
     </nav>
+    <div class="stats">
+        <p id="3iStats" class="hide">1</p>
+    </div>
 <div class="center">
     <input type="button" class="startButton" id="start" value="Start Round">
 </div>
@@ -69,7 +72,7 @@
     <main>
 
         <div class="center">
-            <table class="">
+            <table class="tables">
             
                 <caption><h2>Front 9</h2> </caption>
                 <tbody>
@@ -144,7 +147,7 @@
         </table>
         
           
-                <table class="back9heading">
+                <table class="back9heading tables">
                     <caption><h2>Back 9</h2></caption>
                     <tbody>
                         <tr>
@@ -214,7 +217,7 @@
                         </tr>  
                 </tbody>
             </table>
-            <table>
+            <table class="tableTotal">
                 <caption><h2>Total Round Score</h2></caption>
 
                 <tbody>
