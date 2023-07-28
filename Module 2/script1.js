@@ -3,6 +3,7 @@ addEventListener('load', function () {
     document.getElementById("hole1").addEventListener("click", submitDetails);
     document.getElementById("shot").addEventListener("click", addShot);
     document.getElementById("finishhole").addEventListener("click", nexthole);
+    document.getElementById("removeShot").addEventListener("click", removeShot);
 })
 score = 0
 const dist = [];
@@ -70,15 +71,32 @@ function totalDist(){
         shotNum.push(document.getElementById("shotinfo").innerText);
         club.push(document.getElementById("club").value);
         clubDist.push(+document.getElementById("shotdist").value);
-                       
+        
+        document.getElementById("removeShot").className= "show";              
         document.getElementById(`scor${i}`).innerHTML = score;
         document.getElementById("shotinfo").innerHTML = 'Shot ' + (score + 1);
+    };
+
+    function removeShot(){
+        let i = dist.length;
+        scoreRemove1();
+        hole.pop();
+        shotNum.pop();
+        club.pop();
+        clubDist.pop();
+                       
+        document.getElementById(`scor${i}`).innerHTML = score;
+        document.getElementById("shotinfo").innerHTML = 'Shot ' + (score+1);
     };
 
    
 function scoreAdd1(){
     return score += 1;
 };
+
+function scoreRemove1(){
+    return score -= 1;
+}
 
 
 // Push shot details to array and show next hole details input hide shot details input
@@ -90,6 +108,9 @@ function nexthole(){
     document.getElementById(`ou${i}`).innerHTML = currentOverUnder();
     document.getElementById("totalFrontOU").innerHTML = currentOverUnder();
     document.getElementById("totalRndOu").innerHTML = currentOverUnder();
+    document.getElementById("removeShot").className= "hide";              
+
+    
         // checks if course position is front 9, back 9 or finished.
         if (dist.length <= 9){
             document.getElementById("totalFrontScor").innerHTML = shots.reduce((x, y) => x + y)
