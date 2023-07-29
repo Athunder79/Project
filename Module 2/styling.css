@@ -15,6 +15,16 @@ nav {
 
 }
 
+.blue{
+    background-color: #2781c5;
+    
+}
+
+.blue:hover{
+    background-color: #2781c5;
+
+}
+
 img{
     height:45px;
 }
@@ -36,10 +46,16 @@ img{
 }
 
 
+
+.introTitle {
+    color: #f0f7f5;
+}
+
+
 p {
-    color: white;
+    color: #f0f7f5;
     text-shadow: #111111;
-    font-size: small;
+
     background-color: #5e92bf;
     margin-left: 5px;
     
@@ -139,6 +155,7 @@ h3 {
     justify-content:space-evenly;
     margin-bottom: 20px;
     margin-top: 0px;
+    padding:9px;
 
 }
 
@@ -165,7 +182,7 @@ form {
     border-radius: 0px 0px 8px 8px;
     box-shadow: 0 4px 8px #050505;
     font-size: 12px;
-    width: 40.0%;
+    width: 60%;
     text-align: center;
     border:solid;
     background-color:#46a9a4cc;
@@ -181,9 +198,9 @@ form {
     font-size: 10px;
 }
 
-@media only screen and (min-width: 900px){
+@media only screen and (min-width: 972px){
     .tables {
-        width: 45%;  
+        width: 48%;  
     }
     body {
         width: 80%;
@@ -259,16 +276,14 @@ tr,th {
 }
 
 .stats {
+    position: absolute;
     display: flex;
     flex-direction: column;
-    background-color: #2781c5;
+    justify-content:center;
+    background-color: #5e92bf;
     box-shadow: 0 4px 8px #050505; 
-    padding: 5px;
     border-radius: 8px;
-    width: 90%;
-   
-    
-    
-
+    padding: 15px;
+    margin-top: 20px;
 }
 
