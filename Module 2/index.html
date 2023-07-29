@@ -7,77 +7,113 @@
     <link rel="stylesheet" href="styling.css">
     <script src="script1.js"></script>
     <title>My Scorecard</title>
-    <link rel="icon" type="image/x-icon" href="">
+    <link rel="icon" type="image/x-icon" href="images/golfball.jpg">
 
 </head>
 
-<body>   
+<body>
     <nav>
+        <div>
+            <img src="images/golfball.jpg" alt="Golf Ball as logo">
+        </div>
         <ul>
             <li><a href="#">HOME</a></li>
-            <li><a id="statsButton" href="#">STATS</a></li>
-            <li><a id="removeShot" class ="hide" href="#">REMOVE LAST SHOT</a></li>
+            <li><a id="statsButton" class="hide" href="#">STATS</a></li>
+            <li><a id="removeShot" class="hide" href="#">UNDO LAST SHOT</a></li>
         </ul>
-        
-        
+
+
     </nav>
-    <div class="stats">
-        <p id="3iStats" class="hide">1</p>
+    <div id="intro" class="intro">
+        <h2 class="introTitle">Welcome to My Scorecard</h2>
+        <p>The digital companion for golf enthusiasts -  the My Scorecard site!</p>
+        <p>Whether you're a seasoned pro or just starting your golf journey, our app is designed to elevate your game and enhance your golfing experience.</p>
+        <p>Say goodbye to traditional scorecards and welcome the convenience of technology as we seamlessly track your scores and generate statistics to help you improve your game.</p>
+        <p>For best results use a range finder, however a "guesstimate" of distance will also work!</p>
     </div>
-<div class="center">
-    <input type="button" class="startButton" id="start" value="Start Round">
-</div>
-    <h1 id="holenum" class="hide">Hole 1</h1>
-<div class="center">
-    <form action="#" id="holeLength" class="hide">
-        <div><input id="HoleLnth" class="numEntry" type="number" placeholder="Hole Length Yrds"></div>
-        <div class = "">
-            <label class="dropdownLabel">Select Par</label>
-            <select class="dropdownLabel" name="HolePar" id="HolePar">
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
+    <div id="stats" class="hide">
+        <table>
+            <caption class="introTitle">YOUR ROUND BY CLUB</caption>
+                <tbody>
+                    <tr>
+                        <th scope="col">CLUB</th>
+                        <th scope="col">SHOTS</th>
+                        <th scope="col">DIST</th>
+                        <th scope="col">AVG DIST</th>
+                    </tr>
+                    <tr id="stats0"></tr>
+                    <tr id="stats1"></tr>
+                    <tr id="stats2"></tr>
+                    <tr id="stats3"></tr>
+                    <tr id="stats4"></tr>
+                    <tr id="stats5"></tr>
+                    <tr id="stats6"></tr>
+                    <tr id="stats7"></tr>
+                    <tr id="stats8"></tr>
+                    <tr id="stats9"></tr>
+                    <tr id="stats10"></tr>
+                    <tr id="stats11"></tr>
+                    <tr id="stats12"></tr>
+                </tbody>
+        </table>
+    </div>
+    <div class="center">
+        <button type="button" class="startButton" id="start">Start Round</button>
+    </div>
+    <h1 id="holenum" class="hide">HOLE 1</h1>
+    <div class="center">
+        <form  id="holeLength" class="hide">
+            <div><input id="HoleLnth" class="numEntry" type="number" required placeholder="Hole Length Yrds"></div>
+            <div class="">
+                <label class="dropdownLabel">Select Par</label>
+                <select class="dropdownLabel" name="HolePar" id="HolePar" required>
+                    <option value="3"></option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="enter"><button id="hole1" class="submitButton" type="reset">Submit Details</button></div>
+        </form>
+    </div>
+    <div id="form" class="hide">
+        <form action="#">
+            <label class="shotNum" id="shotinfo">Shot 1</label>
+            <select class="numEntry" name="club" id="club" required>
+                <option disabled selected value="Select Club">Select Club</option>
+                <option value="Driver">Driver</option>
+                <option value="3 Wood">3 Wood</option>
+                <option value="5 Wood">5 Wood</option>
+                <option value="3 Iron">3 Iron</option>
+                <option value="4 Iron">4 Iron</option>
+                <option value="5 Iron">5 Iron</option>
+                <option value="6 Iron">6 Iron</option>
+                <option value="7 Iron">7 Iron</option>
+                <option value="8 Iron">8 Iron</option>
+                <option value="9 Iron">9 Iron</option>
+                <option value="Pitching Wedge">Pitching Wedge</option>
+                <option value="Sand Wedge">Sand Wedge</option>
+                <option value="Putter">Putter</option>
             </select>
-        </div> 
-        <div class = "enter"><button id="hole1" class="enterButton" type="reset">Submit Details</button></div>
-    </form>
-</div>
-<div id="form" class = "hide">
-    <form action="#">
-        <label class="shotNum" id="shotinfo">Shot 1</label>
-        <select class = "numEntry" name="club" id="club">
-          <option value="Select Club">Select Club</option>  
-          <option value="Driver">Driver</option>
-          <option value="3 Wood">3 Wood</option>
-          <option value="5 Wood">5 Wood</option>
-          <option value="3 Iron">3 Iron</option>
-          <option value="4 Iron">4 Iron</option>
-          <option value="5 Iron">5 Iron</option>
-          <option value="6 Iron">6 Iron</option>
-          <option value="7 Iron">7 Iron</option>
-          <option value="8 Iron">8 Iron</option>
-          <option value="9 Iron">9 Iron</option>
-          <option value="Pitching Wedge">Pitching Wedge</option>
-          <option value="Sand Wedge">Sand Wedge</option>
-          <option value="Putter">Putter</option>
-        </select>
-        
-        <input id="shotdist" class="numEntry" type="number" placeholder="Shot Distance in yards">
-        
-        <input id="shot" class="enterButton" type="reset" value="Add Shot">
-        <h2 class="center">OR</h2>
-        <input id="finishhole" class="enterButton1" type="reset" value="Holed the putt">
-      </form>
-</div>
+
+            <input id="shotdist" class="numEntry" type="number" placeholder="Shot Distance in yards">
+
+            <button id="shot" class="submitButton" type="reset">Add Shot</button>
+            <h3 class="center">OR</h3>
+            <button id="finishhole" class="finishedHoleButton" type="reset">Holed the putt</button>
+        </form>
+    </div>
     <main>
 
         <div class="center">
             <table class="tables">
-            
-                <caption><h2>Front 9</h2> </caption>
+
+                <caption>
+                    <h2>Front 9</h2>
+                </caption>
                 <tbody>
                     <tr>
-                        <th>Hole</th>
+                        <th scope="col">Hole</th>
                         <th scope="col">1</th>
                         <th scope="col">2</th>
                         <th scope="col">3</th>
@@ -143,86 +179,90 @@
                         <td id="ou9">0</td>
                         <td id="totalFrontOU"></td>
                     </tr>
-            </tbody>
-        </table>
-        
-          
-                <table class="back9heading tables">
-                    <caption><h2>Back 9</h2></caption>
-                    <tbody>
-                        <tr>
-                            <th class = "">Hole</th>
-                            <th scope="col">10</th>
-                            <th scope="col">11</th>
-                            <th scope="col">12</th>
-                            <th scope="col">13</th>
-                            <th scope="col">14</th>
-                            <th scope="col">15</th>
-                            <th scope="col">16</th>
-                            <th scope="col">17</th>
-                            <th scope="col">18</th>
-                            <th scope="col">Out</th>    
-                        </tr>
-                        <tr>
-                            <td>Dist</td>
-                            <td id="dis10">0</td>
-                            <td id="dis11">0</td>
-                            <td id="dis12">0</td>
-                            <td id="dis13">0</td>
-                            <td id="dis14">0</td>
-                            <td id="dis15">0</td>
-                            <td id="dis16">0</td>
-                            <td id="dis17">0</td>
-                            <td id="dis18">0</td>
-                            <td id="totalBkDis"></td>    
-                        </tr>
-                        <tr>
-                            <td>Par</td>
-                            <td id="par10">0</td>
-                            <td id="par11">0</td>
-                            <td id="par12">0</td>
-                            <td id="par13">0</td>
-                            <td id="par14">0</td>
-                            <td id="par15">0</td>
-                            <td id="par16">0</td>
-                            <td id="par17">0</td>
-                            <td id="par18">0</td>
-                            <td id="totalBkPar"></td>
-                        </tr>
-                        <tr>
-                            <td>Shots</td>
-                            <td id="scor10">0</td>
-                            <td id="scor11">0</td>
-                            <td id="scor12">0</td>
-                            <td id="scor13">0</td>
-                            <td id="scor14">0</td>
-                            <td id="scor15">0</td>
-                            <td id="scor16">0</td>
-                            <td id="scor17">0</td>
-                            <td id="scor18">0</td>
-                            <td id="totalBkScor"></td>
-                        </tr>
-                        <tr>
-                            <td>Score</td>
-                            <td id="ou10">0</td>
-                            <td id="ou11">0</td>
-                            <td id="ou12">0</td>
-                            <td id="ou13">0</td>
-                            <td id="ou14">0</td>
-                            <td id="ou15">0</td>
-                            <td id="ou16">0</td>
-                            <td id="ou17">0</td>
-                            <td id="ou18">0</td>
-                            <td id="totalBkOu"></td>
-                        </tr>  
+                </tbody>
+            </table>
+
+
+            <table class="back9heading tables">
+                <caption>
+                    <h2>Back 9</h2>
+                </caption>
+                <tbody>
+                    <tr>
+                        <th scope="col" class="">Hole</th>
+                        <th scope="col">10</th>
+                        <th scope="col">11</th>
+                        <th scope="col">12</th>
+                        <th scope="col">13</th>
+                        <th scope="col">14</th>
+                        <th scope="col">15</th>
+                        <th scope="col">16</th>
+                        <th scope="col">17</th>
+                        <th scope="col">18</th>
+                        <th scope="col">Out</th>
+                    </tr>
+                    <tr>
+                        <td>Dist</td>
+                        <td id="dis10">0</td>
+                        <td id="dis11">0</td>
+                        <td id="dis12">0</td>
+                        <td id="dis13">0</td>
+                        <td id="dis14">0</td>
+                        <td id="dis15">0</td>
+                        <td id="dis16">0</td>
+                        <td id="dis17">0</td>
+                        <td id="dis18">0</td>
+                        <td id="totalBkDis"></td>
+                    </tr>
+                    <tr>
+                        <td>Par</td>
+                        <td id="par10">0</td>
+                        <td id="par11">0</td>
+                        <td id="par12">0</td>
+                        <td id="par13">0</td>
+                        <td id="par14">0</td>
+                        <td id="par15">0</td>
+                        <td id="par16">0</td>
+                        <td id="par17">0</td>
+                        <td id="par18">0</td>
+                        <td id="totalBkPar"></td>
+                    </tr>
+                    <tr>
+                        <td>Shots</td>
+                        <td id="scor10">0</td>
+                        <td id="scor11">0</td>
+                        <td id="scor12">0</td>
+                        <td id="scor13">0</td>
+                        <td id="scor14">0</td>
+                        <td id="scor15">0</td>
+                        <td id="scor16">0</td>
+                        <td id="scor17">0</td>
+                        <td id="scor18">0</td>
+                        <td id="totalBkScor"></td>
+                    </tr>
+                    <tr>
+                        <td>Score</td>
+                        <td id="ou10">0</td>
+                        <td id="ou11">0</td>
+                        <td id="ou12">0</td>
+                        <td id="ou13">0</td>
+                        <td id="ou14">0</td>
+                        <td id="ou15">0</td>
+                        <td id="ou16">0</td>
+                        <td id="ou17">0</td>
+                        <td id="ou18">0</td>
+                        <td id="totalBkOu"></td>
+                    </tr>
                 </tbody>
             </table>
             <table class="tableTotal">
-                <caption><h2>Total Round Score</h2></caption>
+                <caption>
+                    <h2>Total Round Score</h2>
+                </caption>
 
                 <tbody>
                     <tr>
-                        <th colspan="2">Total</th>
+                        <th scope="colgroup" colspan="2"></th>
                     </tr>
                     <tr>
                         <td>Total Distance</td>
@@ -242,11 +282,11 @@
                     </tr>
                 </tbody>
             </table>
-            
+
         </div>
     </main>
     <footer>
-      
+
     </footer>
 
 </body>
