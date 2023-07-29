@@ -1,27 +1,83 @@
+
 body {
     
     background-image:linear-gradient(#3b3a3a80, #3b3a3a80), url("images/Cullinan_Links_Golf5_dzbj7j.webp");
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
+   
 }
 
 
+nav {
+    display:flex;
+    height: 45px;
+    width: 100%;
+    background-color: #111111;
+
+}
+
+img{
+    height:45px;
+}
+
+.removeLastShot {
+    background-color: #bf1111;
+
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    background-color: #5e92bf;
+    box-shadow: 0 4px 8px #050505; 
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+
+p {
+    color: white;
+    text-shadow: #111111;
+    font-size: small;
+    background-color: #5e92bf;
+    margin-left: 5px;
+    
+}
 
 #holenum, #holeLength{
     color:aliceblue;
 }
 
 h1 {
+    box-shadow: 0 4px 8px #050505; 
+    border-radius: 8px;
     color: aliceblue;
     text-align: center;
-    background-color: #0deb716a;
-    padding:5px
+    background-color: #2781c5;
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+    margin-top:0px;
 }
 
-h2{
-    color: aliceblue;
+caption{
+    border-radius: 8px 8px 0px 0px;
+    margin-block-end: 0em;
+    color: #fefdfd;
+    background-color:#46a9a4cc;
+    margin-bottom: none;
+    margin-top: 20px;
+    
+
 }
 
-.startButton, .enterButton {
+h3 {
+    color: #fefdfd;
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.startButton, .submitButton {
     border-radius: 15px;
     border: none;
     background-color: #2781c5;
@@ -33,10 +89,10 @@ h2{
 
 
 
-.enterButton1 {
+.finishedHoleButton {
     border-radius: 15px;
     border: none;
-    background-color: #bf1111;
+    background-color: #11bf54;
     color: aliceblue;
     font-size: larger;
     padding:10px;
@@ -70,12 +126,19 @@ h2{
 }
 
 .shotNum {
+    box-shadow: 0 4px 8px #050505; 
+    border-radius: 15px;
+    font-size: small;
+    border: none;
+    background-color: #2781c5;
     display: flex;
     flex-direction: row;
     color:aliceblue;
     font-size:xx-large;
     font-weight: bold;
     justify-content:space-evenly;
+    margin-bottom: 20px;
+    margin-top: 0px;
 
 }
 
@@ -85,20 +148,32 @@ form {
 }
 
 .tables {
+    border-radius:0px 0px 8px 8px;
+    box-shadow: 0 4px 8px #050505;
     font-size: 12px;
-    width:80%;
+    width:100%;
     text-align: center;
-    border:solid;
-    background-color:#46a9a4cc;
+    border:none;
+    background-color:#46a9a4cc; 
+    padding-bottom: 4px;
+    padding-left: 1px;
+    padding-right: 1px;
    
 }
 
 .tableTotal{
+    border-radius: 0px 0px 8px 8px;
+    box-shadow: 0 4px 8px #050505;
     font-size: 12px;
     width: 40.0%;
     text-align: center;
     border:solid;
     background-color:#46a9a4cc;
+    border:none;
+    padding-bottom: 5px;
+    padding-left: 1px;
+    padding-right: 1px;
+    margin-bottom: 20px;
 
 }
 
@@ -108,18 +183,15 @@ form {
 
 @media only screen and (min-width: 900px){
     .tables {
-        width: 45%;
-        padding: 0px;
+        width: 45%;  
+    }
+    body {
+        width: 80%;
+        margin: auto;
     }
     
 }
 
-nav {
-    display:flex;
-    width: 100%;
-    background-color: #111111;
-
-}
 ul {
     list-style-type: none;
     margin: 0;
@@ -173,6 +245,7 @@ tr,th {
     flex-wrap:wrap;
     justify-content: space-around;
     padding-top: 15px;
+  
     
 }
 
@@ -186,7 +259,16 @@ tr,th {
 }
 
 .stats {
-    position: absolute;
-    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    background-color: #2781c5;
+    box-shadow: 0 4px 8px #050505; 
+    padding: 5px;
+    border-radius: 8px;
+    width: 90%;
+   
+    
+    
+
 }
 
