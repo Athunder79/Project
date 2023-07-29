@@ -5,9 +5,9 @@ addEventListener('load', function () {
     document.getElementById("shot").addEventListener("click", addShot);
     document.getElementById("finishhole").addEventListener("click", nexthole);
     document.getElementById("removeShot").addEventListener("click", removeShot);
-    document.getElementById("statsButton").addEventListener("click", sumClubDist);
+    document.getElementById("statsButton").addEventListener("click", sumClubDistRun);
     window.addEventListener("beforeunload", (event) => {
-        event.returnValue = 'sdfasf';
+        event.returnValue = 'a';
     });
 })
 score = 0
@@ -29,6 +29,7 @@ function showholength(){
     document.getElementById("start").className ="hide";
     document.getElementById("form").className ="hide";
     document.getElementById("holenum").className= "center";
+    document.getElementById("intro").className = "hide";
 }
 
 // push hole detials to arrays and to html
@@ -36,7 +37,7 @@ function submitDetails(){
     document.getElementById("holeLength").className = "hide";
     document.getElementById("form").className ="center";
     dist.push(+document.getElementById("HoleLnth").value);
-    par.push(+document.getElementById("HolePar").value); 
+    par.push(+document.getElementById("HolePar").value);
     pushHoleDetails();
     document.getElementById("shotinfo").innerHTML="Shot 1";
 }
@@ -78,8 +79,8 @@ function totalDist(){
         shotNum.push(document.getElementById("shotinfo").innerText);
         club.push(document.getElementById("club").value);
         clubDist.push(+document.getElementById("shotdist").value);
-        
-        document.getElementById("removeShot").className= "show";              
+        document.getElementById("statsButton").className ="";
+        document.getElementById("removeShot").className= "removeLastShot";              
         document.getElementById(`scor${i}`).innerHTML = score;
         document.getElementById("shotinfo").innerHTML = 'Shot ' + (score + 1);
     };
@@ -94,6 +95,7 @@ function totalDist(){
                        
         document.getElementById(`scor${i}`).innerHTML = score;
         document.getElementById("shotinfo").innerHTML = 'Shot ' + (score+1);
+        document.getElementById("removeShot").className= "hide"; 
     };
 
    
@@ -151,18 +153,27 @@ function highLow(){
     document.getElementById(`scor${i}`).className=(par[i-1]-shots[i-1] === 0 ? "par" : (par[i-1]-shots[i-1] > 0 ? "underpar" : "overpar"));
 };
 
-
-function sumClubDist(){
+function sumClubDistRun(){
+function sumClubDist(a) {
     let sum = 0;
     let clubTot = 0;
-    for (let i = 0; i < club.length; i++){
-        if (club[i] === "3 Iron"){
-            sum += clubDist[i];
-            clubTot += 1;
-        }
-    }
-    document.getElementById("3iStats").classList.toggle("show");
-    document.getElementById("3iStats").innerHTML = "You hit " + clubTot + " 3 Irons today with a total distance of " + sum + " yards and an average distance of " + Math.round(sum/clubTot) + " yards";
-    
   
+    for (let i = 0; i < club.length; i++) {
+      if (club[i] === clubMaster[a]) {
+        sum += clubDist[i];
+        clubTot += 1;
+      }
+    }
+    document.getElementById("stats").classList.toggle("stats");
+    document.getElementById("statsButton").classList.toggle("blue")
+
+    document.getElementById(`stats${a}`).innerHTML =   `<td>${clubMaster[a]}</td>
+                                                        <td>${clubTot}</td>
+                                                        <td>${sum}</td>
+                                                        <td>${Math.round(sum / clubTot)}</td>`;
+  }
+  
+  for (let i = 0; i < clubMaster.length; i++) {
+    sumClubDist(i);
+  }
 }
