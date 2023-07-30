@@ -160,17 +160,27 @@ function sumClubDist(a) {
   
     for (let i = 0; i < club.length; i++) {
       if (club[i] === clubMaster[a]) {
+        
         sum += clubDist[i];
         clubTot += 1;
       }
     }
     document.getElementById("stats").classList.toggle("stats");
-    document.getElementById("statsButton").classList.toggle("blue")
+    document.getElementById("statsButton").classList.toggle("blue");
+
+    let avg = 0;
+
+    if (clubTot===0){
+        let avg = 0;
+    }
+    else {
+        avg = math.round(sum/clubTot);
+    }
 
     document.getElementById(`stats${a}`).innerHTML =   `<td>${clubMaster[a]}</td>
                                                         <td>${clubTot}</td>
                                                         <td>${sum}</td>
-                                                        <td>${Math.round(sum / clubTot)}</td>`;
+                                                        <td>${avg}</td>`;
   }
   
   for (let i = 0; i < clubMaster.length; i++) {
