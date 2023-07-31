@@ -1,32 +1,31 @@
-
 body {
-    
-    background-image:linear-gradient(#3b3a3a80, #3b3a3a80), url("images/Cullinan_Links_Golf5_dzbj7j.webp");
-    font-family:Arial, Helvetica, sans-serif;
-   
+
+    background-image: linear-gradient(#3b3a3a80, #3b3a3a80), url("images/Cullinan_Links_Golf5_dzbj7j.webp");
+    font-family: Arial, Helvetica, sans-serif;
+
 }
 
 
 nav {
-    display:flex;
+    display: flex;
     height: 45px;
     width: 100%;
     background-color: #111111;
 
 }
 
-.blue{
-    background-color: #2781c5;
-    
-}
-
-.blue:hover{
+.blue {
     background-color: #2781c5;
 
 }
 
-img{
-    height:45px;
+.blue:hover {
+    background-color: #2781c5;
+
+}
+
+img {
+    height: 45px;
 }
 
 .removeLastShot {
@@ -37,9 +36,9 @@ img{
 .intro {
     display: flex;
     flex-direction: column;
-    justify-content:center;
+    justify-content: center;
     background-color: #5e92bf;
-    box-shadow: 0 4px 8px #050505; 
+    box-shadow: 0 4px 8px #050505;
     border-radius: 8px;
     padding: 15px;
     margin-top: 20px;
@@ -58,32 +57,33 @@ p {
 
     background-color: #5e92bf;
     margin-left: 5px;
-    
+
 }
 
-#holenum, #holeLength{
-    color:aliceblue;
+#holenum,
+#holeLength {
+    color: aliceblue;
 }
 
 h1 {
-    box-shadow: 0 4px 8px #050505; 
+    box-shadow: 0 4px 8px #050505;
     border-radius: 8px;
     color: aliceblue;
     text-align: center;
     background-color: #2781c5;
     padding-bottom: 10px;
     margin-bottom: 0px;
-    margin-top:0px;
+    margin-top: 0px;
 }
 
-caption{
+caption {
     border-radius: 8px 8px 0px 0px;
     margin-block-end: 0em;
     color: #fefdfd;
-    background-color:#46a9a4cc;
+    background-color: #46a9a4cc;
     margin-bottom: none;
     margin-top: 20px;
-    
+
 
 }
 
@@ -93,48 +93,53 @@ h3 {
     font-weight: bolder;
 }
 
-.startButton, .submitButton {
+.startButton,
+.submitButton {
+    box-shadow: 0 4px 8px #050505;
     border-radius: 15px;
     border: none;
     background-color: #2781c5;
     color: aliceblue;
     font-size: larger;
-    padding:10px;
+    padding: 10px;
     font-weight: 530;
 }
 
 
 
 .finishedHoleButton {
+    box-shadow: 0 4px 8px #050505;
     border-radius: 15px;
     border: none;
     background-color: #11bf54;
     color: aliceblue;
     font-size: larger;
-    padding:10px;
+    padding: 10px;
     font-weight: 530;
 }
 
 
 
-.numEntry{
-    display:block;
+.numEntry {
+    box-shadow: 0 4px 8px #050505;
+    display: block;
     border-radius: 15px;
     border: none;
     background-color: #f0f7f5;
     font-size: larger;
-    padding:10px;
+    padding: 10px;
     font-weight: 530;
     margin-bottom: 20px;
 }
 
-.dropdownLabel{
+.dropdownLabel {
+    box-shadow: 0 4px 8px #050505;
     color: black;
     border-radius: 15px;
     border: none;
     background-color: #f0f7f5;
     font-size: larger;
-    padding:10px;
+    padding: 10px;
     font-weight: 530;
     margin-bottom: 10px;
 
@@ -142,20 +147,20 @@ h3 {
 }
 
 .shotNum {
-    box-shadow: 0 4px 8px #050505; 
+    box-shadow: 0 4px 8px #050505;
     border-radius: 15px;
     font-size: small;
     border: none;
     background-color: #2781c5;
     display: flex;
     flex-direction: row;
-    color:aliceblue;
-    font-size:xx-large;
+    color: aliceblue;
+    font-size: xx-large;
     font-weight: bold;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     margin-bottom: 20px;
     margin-top: 0px;
-    padding:9px;
+    padding: 9px;
 
 }
 
@@ -165,28 +170,28 @@ form {
 }
 
 .tables {
-    border-radius:0px 0px 8px 8px;
+    border-radius: 0px 0px 8px 8px;
     box-shadow: 0 4px 8px #050505;
     font-size: 12px;
-    width:100%;
+    width: 100%;
     text-align: center;
-    border:none;
-    background-color:#46a9a4cc; 
+    border: none;
+    background-color: #46a9a4cc;
     padding-bottom: 4px;
     padding-left: 1px;
     padding-right: 1px;
-   
+
 }
 
-.tableTotal{
+.tableTotal {
     border-radius: 0px 0px 8px 8px;
     box-shadow: 0 4px 8px #050505;
     font-size: 12px;
     width: 60%;
     text-align: center;
-    border:solid;
-    background-color:#46a9a4cc;
-    border:none;
+    border: solid;
+    background-color: #46a9a4cc;
+    border: none;
     padding-bottom: 5px;
     padding-left: 1px;
     padding-right: 1px;
@@ -194,19 +199,20 @@ form {
 
 }
 
-.back9heading th{
+.back9heading th {
     font-size: 10px;
 }
 
-@media only screen and (min-width: 972px){
+@media only screen and (min-width: 972px) {
     .tables {
-        width: 48%;  
+        width: 48%;
     }
+
     body {
         width: 80%;
         margin: auto;
     }
-    
+
 }
 
 ul {
@@ -215,30 +221,30 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #333333;
-  }
-  
-  li {
+}
+
+li {
     float: left;
-  }
-  
-  li a {
+}
+
+li a {
     display: flex;
 
     color: white;
     text-align: center;
     padding: 13px;
     text-decoration: none;
-  }
-  
-  li a:hover {
+}
+
+li a:hover {
     background-color: #111111;
-  }
+}
 
 td {
     /* border:solid; */
     border-style: collapse;
     background-color: beige;
-    padding: .5em;    
+    padding: .5em;
 }
 
 .underpar {
@@ -253,17 +259,18 @@ td {
     background-color: #bc3c3c;
 }
 
-tr,th {
+tr,
+th {
     padding: 1em;
 }
 
 .center {
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     justify-content: space-around;
     padding-top: 15px;
-  
-    
+
+
 }
 
 .hide {
@@ -271,7 +278,7 @@ tr,th {
 }
 
 .show {
-    display:flex;
+    display: flex;
     align-items: center;
 }
 
@@ -279,11 +286,10 @@ tr,th {
     position: absolute;
     display: flex;
     flex-direction: column;
-    justify-content:center;
+    justify-content: center;
     background-color: #5e92bf;
-    box-shadow: 0 4px 8px #050505; 
+    box-shadow: 0 4px 8px #050505;
     border-radius: 8px;
     padding: 15px;
     margin-top: 20px;
 }
-

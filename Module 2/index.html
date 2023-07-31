@@ -26,35 +26,37 @@
     </nav>
     <div id="intro" class="intro">
         <h2 class="introTitle">Welcome to My Scorecard</h2>
-        <p>The digital companion for golf enthusiasts -  the My Scorecard site!</p>
-        <p>Whether you're a seasoned pro or just starting your golf journey, our app is designed to elevate your game and enhance your golfing experience.</p>
-        <p>Say goodbye to traditional scorecards and welcome the convenience of technology as we seamlessly track your scores and generate statistics to help you improve your game.</p>
+        <p>The digital companion for golf enthusiasts - the My Scorecard site!</p>
+        <p>Whether you're a seasoned pro or just starting your golf journey, our app is designed to elevate your game
+            and enhance your golfing experience.</p>
+        <p>Say goodbye to traditional scorecards and welcome the convenience of technology as we seamlessly track your
+            scores and generate statistics to help you improve your game.</p>
         <p>For best results use a range finder, however a "guesstimate" of distance will also work!</p>
     </div>
     <div id="stats" class="hide">
         <table>
             <caption class="introTitle">YOUR ROUND BY CLUB</caption>
-                <tbody>
-                    <tr>
-                        <th scope="col">CLUB</th>
-                        <th scope="col">SHOTS</th>
-                        <th scope="col">DIST</th>
-                        <th scope="col">AVG DIST</th>
-                    </tr>
-                    <tr id="stats0"></tr>
-                    <tr id="stats1"></tr>
-                    <tr id="stats2"></tr>
-                    <tr id="stats3"></tr>
-                    <tr id="stats4"></tr>
-                    <tr id="stats5"></tr>
-                    <tr id="stats6"></tr>
-                    <tr id="stats7"></tr>
-                    <tr id="stats8"></tr>
-                    <tr id="stats9"></tr>
-                    <tr id="stats10"></tr>
-                    <tr id="stats11"></tr>
-                    <tr id="stats12"></tr>
-                </tbody>
+            <tbody>
+                <tr>
+                    <th scope="col">CLUB</th>
+                    <th scope="col">SHOTS</th>
+                    <th scope="col">DIST</th>
+                    <th scope="col">AVG DIST</th>
+                </tr>
+                <tr id="stats0"></tr>
+                <tr id="stats1"></tr>
+                <tr id="stats2"></tr>
+                <tr id="stats3"></tr>
+                <tr id="stats4"></tr>
+                <tr id="stats5"></tr>
+                <tr id="stats6"></tr>
+                <tr id="stats7"></tr>
+                <tr id="stats8"></tr>
+                <tr id="stats9"></tr>
+                <tr id="stats10"></tr>
+                <tr id="stats11"></tr>
+                <tr id="stats12"></tr>
+            </tbody>
         </table>
     </div>
     <div class="center">
@@ -62,12 +64,12 @@
     </div>
     <h1 id="holenum" class="hide">HOLE 1</h1>
     <div class="center">
-        <form  id="holeLength" class="hide">
+        <form required id="holeLength" class="hide">
             <div><input id="HoleLnth" class="numEntry" type="number" required placeholder="Hole Length Yrds"></div>
             <div class="">
                 <label class="dropdownLabel">Select Par</label>
-                <select class="dropdownLabel" name="HolePar" id="HolePar" required>
-                    <option value="3"></option>
+                <select class="dropdownLabel" type="number"  id="HolePar" required>
+                    <option value="a">Par</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5</option>
@@ -96,7 +98,7 @@
                 <option value="Putter">Putter</option>
             </select>
 
-            <input id="shotdist" class="numEntry" type="number" placeholder="Shot Distance in yards">
+            <input id="shotdist" class="numEntry" type="number" required placeholder="Shot Distance in yards">
 
             <button id="shot" class="submitButton" type="reset">Add Shot</button>
             <h3 class="center">OR</h3>
