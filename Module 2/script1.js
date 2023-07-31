@@ -15,7 +15,6 @@ const clubMaster = ['Driver', '3 Wood', '5 Wood', '3 Iron', '4 Iron', '5 Iron', 
 const dist = [];
 const par = [];
 const shots = [];
-
 const club = [];
 const clubDist = [];
 const shotNum = [];
@@ -36,11 +35,12 @@ function checkInputHole() {
     let holeLengthInput = document.getElementById("HoleLnth").value;
     let holeParInput = document.getElementById("HolePar").value;
 
-    if (holeLengthInput === "" || holeParInput ==="a") {
+    if (holeLengthInput === "" || holeParInput === "a") {
         alert("Please fill in all the required fields.");
     } else {
-       submitDetails()
-}}
+        submitDetails()
+    }
+}
 
 // push hole detials to arrays and to html
 function submitDetails() {
@@ -66,9 +66,9 @@ function pushHoleDetails() {
 
     else {
 
-        document.getElementById("totalBkDis").innerHTML = dist.slice(8, dist.length - 1).reduce((x, y) => x + y);
+        document.getElementById("totalBkDis").innerHTML = dist.slice(9, dist.length).reduce((x, y) => x + y);
         document.getElementById("totalRndDis").innerHTML = totalDist();
-        document.getElementById("totalBkPar").innerHTML = par.slice(8, par.length - 1).reduce((x, y) => x + y);
+        document.getElementById("totalBkPar").innerHTML = par.slice(9, par.length).reduce((x, y) => x + y);
         document.getElementById("totalRndPar").innerHTML = totalPar();
     };
 
@@ -86,11 +86,12 @@ function checkInputShot() {
     let clubInput = document.getElementById("club").value;
     let distanceInput = document.getElementById("shotdist").value;
 
-    if (clubInput === "Select Club" || distanceInput ==="") {
+    if (clubInput === "Select Club" || distanceInput === "") {
         alert("Please fill in all the required fields.");
     } else {
-       addShot()
-}}
+        addShot()
+    }
+}
 
 
 //  Add current shot to html table and arrays
@@ -137,8 +138,9 @@ function nexthole() {
 
     document.getElementById(`scor${i}`).innerHTML = shots[i - 1];
     document.getElementById(`ou${i}`).innerHTML = currentOverUnder();
-    document.getElementById("totalFrontOU").innerHTML = currentOverUnder();
-    document.getElementById("totalRndOu").innerHTML = currentOverUnder();
+    document.getElementById("totalFrontOU").innerHTML = totalFrontOverUnder();
+    document.getElementById("totalBkOu").innerHTML = totalBackOverUnder();
+    document.getElementById("totalRndOu").innerHTML = overUnder();
     document.getElementById("removeShot").className = "hide";
 
 
@@ -148,7 +150,7 @@ function nexthole() {
         document.getElementById("totalRndScor").innerHTML = shots.reduce((x, y) => x + y)
     }
     else {
-        document.getElementById("totalBkScor").innerHTML = shots.slice(8, shots.length - 1).reduce((x, y) => x + y);
+        document.getElementById("totalBkScor").innerHTML = shots.slice(8, shots.length).reduce((x, y) => x + y);
         document.getElementById("totalRndScor").innerHTML = shots.reduce((x, y) => x + y);
 
     };
@@ -167,10 +169,44 @@ function nexthole() {
     }
 };
 
-function currentOverUnder() {
+function overUnder() {
     let i = dist.length;
     return parseInt(document.getElementById(`ou${i - 1}`).innerHTML) + parseInt(shots[i - 1] - par[i - 1]);
+
 }
+
+function currentOverUnder() {
+    let i = dist.length;
+    if (i !== 10) {
+        return parseInt(document.getElementById(`ou${i - 1}`).innerHTML) + parseInt(shots[i - 1] - par[i - 1]);
+    }
+    else {
+        return parseInt(document.getElementById(`ou${i - 1}`).innerHTML) + parseInt(shots[i - 1] - par[i - 1]) - parseInt(document.getElementById('ou9').innerHTML, 10);
+    }
+}
+
+
+
+function totalFrontOverUnder() {
+    let i = dist.length;
+    if (i < 9) {
+        return currentOverUnder();
+    }
+    else {
+        return parseInt(document.getElementById('ou9').innerHTML, 10);
+    }
+}
+
+function totalBackOverUnder() {
+    let i = dist.length;
+    if (i > 9) {
+        return currentOverUnder();
+    } else {
+        return '';
+    }
+}
+
+
 
 // Colour code completed hole cells
 function highLow() {
