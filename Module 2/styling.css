@@ -295,14 +295,16 @@ th {
     padding: 15px;
     margin-top: 20px;
 }
-a{
+
+a {
     color: #f0f7f5;
 }
- footer {
-    margin-top:30px;
-    border-radius:8px;
+
+footer {
+    margin-top: 30px;
+    border-radius: 8px;
     display: flex;
-    background-color:#5e92bf;
+    background-color: #5e92bf;
     width: 100%;
-    color:#f0f7f5;
- }
+    color: #f0f7f5;
+}

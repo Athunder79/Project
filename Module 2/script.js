@@ -131,10 +131,10 @@ function scoreRemove1() {
 }
 
 
-function checkFinishHole(){
-    if (score === 0){
+function checkFinishHole() {
+    if (score === 0) {
         alert("You have not added any shots, please add your shot before finishing the hole.");
-    } 
+    }
     else {
         nexthole();
     }
